@@ -1,4 +1,4 @@
-# 10 projects using Vaniila JS ❤
+# 10 projects using Vanilla JS ❤
 
 To practice JavaScript I have made:
  * Project

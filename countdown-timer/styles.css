@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 5% 0;
+    font-family: 'Baskerville', sans-serif;
+    font-size: 5rem;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1545062990-4a95e8e4b96d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.countdown-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.countdown-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.number {
+    font-size: 7rem;
+}
