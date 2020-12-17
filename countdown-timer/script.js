@@ -1,18 +1,52 @@
-let countDownDate = new Date('January 1, 2021 10:00:00').getTime();
+// ========== New Years Eve ========== Sets function as variable which calls set interval immediatley. This ALWAYS makes the countdown .5 seconds FAST
+const newYears = new Date('January 1, 2021 10:00:00').getTime();
 
-let x = setInterval(function () {
+const x = setInterval(function () {
 
-    let curtime = new Date().getTime();
+    const curtime = new Date().getTime();
 
-    let distance = countDownDate - curtime;
+    const distance = newYears - curtime;
 
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / (1000));
+    const NYdays = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const NYhours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const NYminutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const NYseconds = Math.floor((distance % (1000 * 60)) / (1000));
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("NYdays").innerHTML = NYdays;
+    document.getElementById("NYhours").innerHTML = NYhours;
+    document.getElementById("NYminutes").innerHTML = NYminutes;
+    document.getElementById("NYseconds").innerHTML = NYseconds;
 })
+
+
+
+// ******** BETTER SOLUTION ********
+// ========== Valentines Day ========== Calls function THEN sets the interval. This SOMETIMES makes countdown .5 seconds SLOW
+const valentinesDay = '14 Feb 2021';
+
+const VDdays = document.getElementById("VDdays");
+const VDhours = document.getElementById("VDhours");
+const VDminutes = document.getElementById("VDminutes");
+const VDseconds = document.getElementById("VDseconds");
+
+
+function vdCountdown() {
+    const valDay = new Date(valentinesDay);
+    const currentTime = new Date();
+
+    const distance = (valDay - currentTime) / 1000;
+    console.log("from the function", distance)
+
+    const days = Math.floor(distance / 3600 / 24);
+    const hours = Math.floor(distance / 3600) % 24;
+    const minutes = Math.floor(distance / 60) % 60;
+    const seconds = Math.floor(distance) % 60;
+
+    VDdays.innerHTML = days;
+    VDhours.innerHTML = hours;
+    VDminutes.innerHTML = minutes;
+    VDseconds.innerHTML = seconds;
+}
+
+vdCountdown()
+setInterval(vdCountdown, 1000);
