@@ -1,4 +1,5 @@
-// ========== New Years Eve ========== Sets function as variable which calls set interval immediatley. This ALWAYS makes the countdown .5 seconds FAST
+// ========== New Years Eve ==========
+// ========== Sets function as variable which calls set interval immediatley. This ALWAYS makes the countdown .5 seconds FAST ==========
 const newYears = new Date('January 1, 2021 10:00:00').getTime();
 
 const x = setInterval(function () {
@@ -21,7 +22,8 @@ const x = setInterval(function () {
 
 
 // ******** BETTER SOLUTION ********
-// ========== Valentines Day ========== Calls function THEN sets the interval. This SOMETIMES makes countdown .5 seconds SLOW
+// ========== Valentines Day ==========
+// ========== Calls function THEN sets the interval. This SOMETIMES makes countdown .5 seconds SLOW ==========
 const valentinesDay = '14 Feb 2021';
 
 const VDdays = document.getElementById("VDdays");
@@ -48,5 +50,7 @@ function vdCountdown() {
     VDseconds.innerHTML = seconds;
 }
 
+// ===== initial call =====
 vdCountdown()
+// ===== set interval starts 1 second after initail call =====
 setInterval(vdCountdown, 1000);

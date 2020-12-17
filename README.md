@@ -1,7 +1,7 @@
 # 10 projects using Vanilla JS ❤
 
 To practice JavaScript I have made:
- * Project
+ * Countdown Timer
  * Project
  * Project
  * Project
